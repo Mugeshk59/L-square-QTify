@@ -1,0 +1,34 @@
+.herosection{
+        background-color: #121212;
+        width: 100%;
+        height: 270px;
+        border: 10px;
+        border-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+}
+
+.herocontent{
+        display: flex;
+        flex-direction: row;
+        word-wrap: break-word;
+        width: 799px;
+        height: 212px;
+        color: white;
+}
+
+.wordcontent{
+        width: 556px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 32px;
+        font-weight: 600;
+        font-family: 'Poppins';
+}
+.lineStyle{
+        height: 48px;
+}

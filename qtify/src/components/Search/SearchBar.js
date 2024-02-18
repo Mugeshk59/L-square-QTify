@@ -7,7 +7,7 @@ import { ReactComponent as SearchIcon } from "../../assets/search-icon.svg";
 export default function SearchBar(){
         return (
                 <div className={styles.container}>
-                        <input name = "search" className={styles.search} placeholder="Enter an album" />
+                        <input name = "search" className={styles.search} placeholder="search" />
                         <button className={styles.searchButton}>
                         <SearchIcon/>
                         </button>

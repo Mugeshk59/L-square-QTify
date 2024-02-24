@@ -8,7 +8,7 @@ export default function HeroSection(){
                 <div className={styles.herosection}>
                 <div className={styles.herocontent}>
                         <div className={styles.wordcontent}>
-                        <p className={styles.lineStyle}>100 Thousand Songs, ad-free </p> <p className={styles.lineStyle}>over Thousand podcast episodes        
+                        <p >100 Thousand Songs, ad-free over Thousand podcast episodes        
                         </p>
                         </div>
                         <HeroImage />

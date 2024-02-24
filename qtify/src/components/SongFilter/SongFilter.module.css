@@ -1,0 +1,19 @@
+.filterSection{
+        display: flex;
+        flex-direction: row;
+        /* border: 15px; */
+
+}
+.songFilter{
+        color: white;
+        display: block;
+        text-align: center;
+        padding:10px;
+        border: 2px;
+        cursor: pointer;
+}
+.selected{
+        border-bottom: 2px solid #34C94B;
+        /* text-decoration-line:underline;  */
+        /* text-decoration-color:  #34C94B; */
+}

@@ -12,8 +12,8 @@
 
 .herocontent{
         display: flex;
+    justify-content: center; /* Horizontal center alignment */
         flex-direction: row;
-        word-wrap: break-word;
         width: 799px;
         height: 212px;
         color: white;
@@ -21,14 +21,9 @@
 
 .wordcontent{
         width: 556px;
-        height: 100px;
-        display: flex;
-        justify-content: center;
+        text-align: center;
         flex-wrap: wrap;
         font-size: 32px;
         font-weight: 600;
         font-family: 'Poppins';
-}
-.lineStyle{
-        height: 48px;
 }

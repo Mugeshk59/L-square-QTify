@@ -1,0 +1,33 @@
+.section{
+        display: flex;
+        flex-direction: row;
+        /* background-color: black; */
+        width: 1353px;
+        height: 280px;
+        border-bottom-color: #34C94B;
+}
+.sectiontitle{
+        font-family: "Poppins";
+        font-weight: 600;
+        font-size: 20px;
+        height: 30px;
+        color: white;
+        padding-left: 10px;
+}
+.titlesection{
+        display: flex;
+        /* flex-direction: row; */
+        align-items: center;
+        justify-content: space-between;
+}
+.click{
+        color: #34C94B;  
+      /* background-color:#121212 ; */
+      cursor: pointer;
+      font-family: "Poppins";
+        font-weight: 600;
+        font-size: 20px;
+        height: 30px;
+        padding-right: 10px;
+
+}

@@ -1,0 +1,37 @@
+/* Carousel container */
+.container {
+        width: 100%;
+        padding: 20px;
+      }
+      
+      /* Individual slide */
+      .swiper-slide {
+        width: auto; /* Adjust width as needed */
+      }
+      
+      /* Navigation buttons */
+      .swiper-button-next,
+      .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        color: #fff;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 10;
+      }
+      
+      .swiper-button-next {
+        right: 10px;
+      }
+      
+      .swiper-button-prev {
+        left: 10px;
+      }

@@ -18,12 +18,15 @@ export default function Section({ title, data, filterSource=[],type }) {
     console.log("inside section handlefilter",key,lable);
     setFilters({key:key,lable:lable})
   }
+  const handleTogle=()=>{
+    SetCourosal((prevState)=> !prevState);
+  }
   return (
     <>
     <div className={styles.titlesection}>
     <p className={styles.sectiontitle}>{title}</p>
-    {corousel && type == 'album' && (<span className={styles.click}>show all</span>)}
-    {!corousel && type == 'album' && (<span className={styles.click}>Collapse</span>)}
+    {corousel && type == 'album' && (<span className={styles.click} onClick={handleTogle}>show all</span>)}
+    {!corousel && type == 'album' && (<span className={styles.click}  onClick={handleTogle}>Collapse</span>)}
     </div>
       
       {type == 'song' && filterSource.length!=0 &&(

@@ -6,7 +6,7 @@ import Corousal from "../corousal/Corousal";
 import SongFilter from "../SongFilter/SongFilter";
 
 export default function Section({ title, data, filterSource=[],type }) {
-  const [filters,setFilters]=useState({key:"rock",lable:"Rock"});
+  const [filters,setFilters]=useState({key:"all",lable:"All"});
   const [corousal,SetCourosal] =useState(1);
   console.log("inside section", title, data, type,filterSource);
   let songData = data;

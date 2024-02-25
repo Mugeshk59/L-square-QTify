@@ -25,7 +25,7 @@ export default function Section({ title, data, filterSource=[],type }) {
     <>
     <div className={styles.titlesection}>
     <p className={styles.sectiontitle}>{title}</p>
-    {corousel && type == 'album' && (<span className={styles.click} onClick={handleTogle}>show all</span>)}
+    {corousel && type == 'album' && (<span className={styles.click} onClick={handleTogle}>show All</span>)}
     {!corousel && type == 'album' && (<span className={styles.click}  onClick={handleTogle}>Collapse</span>)}
     </div>
       

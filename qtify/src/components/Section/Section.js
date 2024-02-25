@@ -36,14 +36,14 @@ export default function Section({ title, data, filterSource=[],type }) {
       ) }
       {data.length === 0 && <CircularProgress />}
     
-      {data.length > 0 && corousal && <Corousal data={songData} type={type}/>} 
-      {data.length > 0 && !corousal && (
+      {data.length > 0  && <Corousal data={songData} type={type}/>} 
+      {/* {data.length > 0 && !corousal && (
         <div className={styles.showAll}>
           {data.map((dataItem) => (
         <Card key={dataItem.id} data={dataItem} type={type} />
       ))}
         </div>
-      )}
+      )} */}
     </>
   );
 }

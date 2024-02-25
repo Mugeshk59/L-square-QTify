@@ -31,3 +31,8 @@
         padding-right: 10px;
 
 }
+
+.showAll{
+        display: flex;
+        flex-wrap: wrap;
+}

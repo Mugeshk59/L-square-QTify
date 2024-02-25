@@ -7,7 +7,7 @@ import SongFilter from "../SongFilter/SongFilter";
 
 export default function Section({ title, data, filterSource=[],type }) {
   const [filters,setFilters]=useState({key:"rock",lable:"Rock"});
-  const [corousel,SetCourosal] =useState(0);
+  const [corousal,SetCourosal] =useState(1);
   console.log("inside section", title, data, type,filterSource);
   let songData = data;
   if(type == 'song' && filters.key != 'all') {
@@ -25,8 +25,8 @@ export default function Section({ title, data, filterSource=[],type }) {
     <>
     <div className={styles.titlesection}>
     <p className={styles.sectiontitle}>{title}</p>
-    {corousel && type == 'album' && (<span className={styles.click} onClick={handleTogle}>show All</span>)}
-    {!corousel && type == 'album' && (<span className={styles.click}  onClick={handleTogle}>Collapse</span>)}
+    {corousal && type == 'album' && (<span className={styles.click} onClick={handleTogle}>show all</span>)}
+    {!corousal && type == 'album' && (<span className={styles.click}  onClick={handleTogle}>Collapse</span>)}
     </div>
       
       {type == 'song' && filterSource.length!=0 &&(
@@ -36,8 +36,14 @@ export default function Section({ title, data, filterSource=[],type }) {
       ) }
       {data.length === 0 && <CircularProgress />}
     
-      {data.length > 0 && <Corousal data={songData} type={type}/>} 
-
+      {data.length > 0 && corousal && <Corousal data={songData} type={type}/>} 
+      {data.length > 0 && !corousal && (
+        <div className={styles.showAll}>
+          {data.map((dataItem) => (
+        <Card key={dataItem.id} data={dataItem} type={type} />
+      ))}
+        </div>
+      )}
     </>
   );
 }

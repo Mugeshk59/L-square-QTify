@@ -7,7 +7,7 @@ import SongFilter from "../SongFilter/SongFilter";
 
 export default function Section({ title, data, filterSource=[],type }) {
   const [filters,setFilters]=useState({key:"all",lable:"All"});
-  const [corousal,SetCourosal] =useState(1);
+  const [corousal,SetCourosal] =useState(true);
   console.log("inside section", title, data, type,filterSource);
   let songData = data;
   if(type == 'song' && filters.key != 'all') {
@@ -25,8 +25,11 @@ export default function Section({ title, data, filterSource=[],type }) {
     <>
     <div className={styles.titlesection}>
     <p className={styles.sectiontitle}>{title}</p>
-    {corousal && type == 'album' && (<span className={styles.click} onClick={handleTogle}>Show All</span>)}
-    {!corousal && type == 'album' && (<span className={styles.click}  onClick={handleTogle}>Collapse</span>)}
+    <h4 className={styles.click} onClick={handleTogle}>
+          {!corousal ? "Collapse All" : "Show All"}
+        </h4>
+    {/* {corousal && type == 'album' && (<span className={styles.click} onClick={handleTogle}>Show All</span>)}
+    {!corousal && type == 'album' && (<span className={styles.click}  onClick={handleTogle}>Collapse</span>)} */}
     </div>
       
       {type == 'song' && filterSource.length!=0 &&(
